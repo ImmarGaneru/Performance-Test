@@ -9,6 +9,7 @@ use App\Http\Controllers\TestPageController;
 use App\Http\Controllers\ContentsController;
 use App\Http\Controllers\DocumentationController;
 use App\Http\Controllers\Auth\AuthenticatedSessionController;
+use App\Http\Controllers\UnitController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Http;
@@ -140,43 +141,7 @@ Route::middleware(['web', 'auth'])->prefix('api')->name('api.')->group(function 
     Route::get('/performance-records', [DataAnalysisController::class, 'getPerformanceRecords'])->name('performance-records');
     
     // Units API
-    Route::get('/units/load', function(Request $request) {
-        $user = Auth::user();
-        if (!$user) {
-            return response()->json(['error' => 'Unauthorized'], 401);
-        }
-
-        $search = $request->query('search', '');
-        $page = (int) $request->query('page', 1);
-        $limit = (int) $request->query('limit', 20);
-        
-        $availableUnits = Unit::getAvailableForUser($user);
-        
-        // Apply search filter if provided
-        if ($search) {
-            $availableUnits = $availableUnits->filter(function($unit) use ($search) {
-                return stripos($unit->unit_name, $search) !== false;
-            });
-        }
-        
-        // Apply pagination
-        $offset = ($page - 1) * $limit;
-        $paginatedUnits = $availableUnits->slice($offset, $limit);
-        
-        return response()->json([
-            'units' => $paginatedUnits->map(function($unit) {
-                return [
-                    'value' => $unit->unit_id,
-                    'label' => $unit->getDisplayText(),
-                    'plant_id' => $unit->plant_id,
-                    'status' => $unit->status
-                ];
-            })->values(),
-            'total' => $availableUnits->count(),
-            'page' => $page,
-            'has_more' => $availableUnits->count() > ($offset + $limit)
-        ]);
-    })->name('units.load');
+    Route::get('/units/load', [UnitController::class, 'load'])->name('units.load');
     
     // Data Analysis API Routes
     Route::prefix('data-analysis')->name('data-analysis.')->group(function () {

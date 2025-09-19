@@ -114,25 +114,6 @@ class User extends Authenticatable
     }
 
     /**
-     * Handle password updates.
-     */
-    public function updatePassword($password)
-    {
-        // Hash the password before storing
-        if (!empty($password) && !str_starts_with($password, '$2y$')) {
-            $this->password = Hash::make($password);
-            Log::info('Password updated and hashed for user', [
-                'user_id' => $this->id,
-                'original_length' => strlen($password),
-                'hashed_length' => strlen($this->password)
-            ]);
-        } else {
-            $this->password = $password;
-        }
-        return $this->save();
-    }
-
-    /**
      * Get the token value for the "remember me" session.
      */
     public function getRememberToken()
