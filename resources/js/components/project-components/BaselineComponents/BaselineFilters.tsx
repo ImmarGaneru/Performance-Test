@@ -1,5 +1,5 @@
 import { Input } from '@/components/ui/input';
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { useEffect, useState } from 'react';
 
 

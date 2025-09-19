@@ -1,5 +1,5 @@
 import { Button } from '@/components/ui/button';
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { Plus } from 'lucide-react';
 import { PerformanceAddRow } from './PerformanceAddRow';
 

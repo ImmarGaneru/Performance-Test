@@ -1,6 +1,6 @@
 import { Input } from '@/components/ui/input';
 import { Select, SelectContent, SelectItem, SelectTrigger, SelectValue } from '@/components/ui/select';
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { useEffect, useState } from 'react';
 import { CalendarDropdown } from './CalendarDropdown';
 

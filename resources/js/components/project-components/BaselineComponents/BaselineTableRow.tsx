@@ -1,4 +1,4 @@
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { Eye, Trash2 } from 'lucide-react';
 import { Tooltip, TooltipContent, TooltipProvider, TooltipTrigger } from '@/components/ui/tooltip';
 import { Button } from "@/components/ui/button";

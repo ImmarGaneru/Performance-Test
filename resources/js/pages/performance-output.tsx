@@ -1,5 +1,5 @@
 import { PerformanceOutputContainer } from '@/components/project-components/PerformanceOutputComponents/PerformanceOutputContainer';
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import AppLayout from '@/layouts/app-layout';
 import { Head } from '@inertiajs/react';
 

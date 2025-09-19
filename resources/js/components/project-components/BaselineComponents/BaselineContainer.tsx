@@ -1,4 +1,4 @@
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { router } from '@inertiajs/react';
 import { useState, useCallback } from 'react';
 import { BaselineTable } from './BaselineTable';

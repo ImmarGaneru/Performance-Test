@@ -18,3 +18,16 @@ export interface BaselineDetail {
         satuan: string;
     }
 }
+
+export interface Performance {
+    id: number; // perf_id from database
+    description: string;
+    date_perfomance: string;
+    date_created: string;
+    status: 'Editable' | 'Locked';
+    unit_id: number;
+    unit_name?: string; // Optional for backward compatibility
+    type?: string; // Type field
+    weight?: string; // Weight field
+    reference_exists?: boolean; // New field to indicate if references exist
+}

@@ -1,4 +1,4 @@
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { getCurrentDateString } from '@/utils';
 import { router } from '@inertiajs/react';
 import { useState, useCallback, useEffect } from 'react';

@@ -1,5 +1,5 @@
 import { BaselineContainer } from '@/components/project-components/BaselineComponents/BaselineContainer';
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import AppLayout from '@/layouts/app-layout';
 import { Head } from '@inertiajs/react';
 

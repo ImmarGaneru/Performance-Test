@@ -1,4 +1,4 @@
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { Save, X } from 'lucide-react';
 
 interface PerformanceAddRowProps {

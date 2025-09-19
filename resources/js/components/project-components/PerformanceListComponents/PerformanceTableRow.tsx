@@ -1,4 +1,4 @@
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { Edit2, Save, Trash2, X } from 'lucide-react';
 
 interface PerformanceTableRowProps {

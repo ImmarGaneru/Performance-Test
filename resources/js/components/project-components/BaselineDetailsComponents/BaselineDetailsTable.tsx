@@ -1,5 +1,5 @@
 import React from 'react';
-import { BaselineDetail } from '@/data/baselineData'; // You will need to define this type
+import { BaselineDetail } from '@/types/models'; // You will need to define this type
 
 interface BaselineDetailsTableProps {
     data: BaselineDetail[];

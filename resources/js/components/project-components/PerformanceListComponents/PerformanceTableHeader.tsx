@@ -1,4 +1,4 @@
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { ArrowUpDown } from 'lucide-react';
 
 interface PerformanceTableHeaderProps {

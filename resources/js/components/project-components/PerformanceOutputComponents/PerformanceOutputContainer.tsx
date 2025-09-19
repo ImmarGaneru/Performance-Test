@@ -1,4 +1,4 @@
-import { Performance } from '@/data/mockPerformanceData';
+import { Performance } from '@/types/models';
 import { router } from '@inertiajs/react';
 import { useState, useCallback } from 'react';
 import { PerformanceOutputTable } from './PerformanceOutputTable';

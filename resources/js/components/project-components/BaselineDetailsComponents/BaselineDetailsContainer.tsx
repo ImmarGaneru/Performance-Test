@@ -1,4 +1,4 @@
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { useState, useEffect } from 'react';
 import { BaselineDetailsTable } from './BaselineDetailsTable';
 import { AlertTriangle, Info } from "lucide-react";

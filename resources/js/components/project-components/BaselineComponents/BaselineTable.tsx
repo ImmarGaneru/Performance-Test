@@ -1,4 +1,4 @@
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { ChevronLeft, ChevronRight, ChevronsLeft, ChevronsRight } from 'lucide-react';
 import { useMemo, useState } from 'react';
 import { BaselineFilters } from './BaselineFilters';

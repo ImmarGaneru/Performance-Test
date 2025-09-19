@@ -1,4 +1,4 @@
-import { Baseline } from '@/data/baselineData';
+import { Baseline } from '@/types/models';
 import { ArrowUpDown } from 'lucide-react';
 
 interface BaselineTableHeaderProps {
